@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Centro Comunitário Harbor Light: Adicionando Acessibilidade e Dados Estruturados</title>
+</head>
+<body>
+
+  <!-- Header (substituiu o primeiro <div>) -->
+  <header>
+    <div class="center-and-space-content">
+      <!-- Logo dentro de um container; alt descritivo conforme solicitado -->
+
+        <div class="center-and-space-content">
+            <img src="https://edube.org/uploads/media/default/0001/04/logo.jpg" alt="Logotipo do Centro Comunitário Harbor Light">
+        </div>
+
+      <h1>Harbor Light Community Center</h1>
+
+      <!-- Banner decorativo marcado para ser ignorado por leitores de tela -->
+      <div aria-hidden="true">
+        <img src="banner.jpg" alt="" aria-hidden="true" width="100%" height="auto">
+      </div>
+    </div>
+
+    
+
+    <!-- Navegação transformada em <nav> com papel ARIA e links de âncora -->
+<nav role="navigation" aria-label="Navegação principal">
+  <ul>
+    <li><a href="#about">Sobre nós</a></li>
+    <li><a href="#services">Nossos serviços</a></li>
+    <li><a href="#events">Participe de nossos eventos</a></li>
+    <li><a href="#contact">Fale Conosco</a></li>
+  </ul>
+</nav>
+  </header>
+
+
+
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- "Sobre nós" (id para âncora, seção semântica e títulos em hierarquia correta) -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Sobre nós</h2>
+      <p>
+        O Harbor Light Community Center oferece programas comunitários, aulas e eventos projetados para fortalecer laços locais e apoiar famílias.
+      </p>
+      <p>
+        Nossa missão é fornecer um espaço seguro e acolhedor para todas as idades, promovendo inclusão, educação e bem-estar.
+      </p>
+      <!-- imagem com alt descritivo -->
+      <figure>
+        <img src="https://edube.org/uploads/media/default/0001/04/community-center.jpg" alt="Pessoas do Centro Comunitário Harbor Light" width="600" height="auto">
+        <figcaption>Atividade comunitária no Harbor Light Community Center.</figcaption>
+      </figure>
+    </section>
+
+
+
+
+    <!-- "Nossos serviços" -->
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Nossos serviços</h2>
+      <p>Oferecemos:</p>
+      <ul>
+        <li>Aulas de alfabetização e informática</li>
+        <li>Atividades recreativas para jovens</li>
+        <li>Suporte a idosos — encontros e serviços de bem-estar</li>
+        <li>Espaço para eventos comunitários</li>
+      </ul>
+    </section>
+
+
+
+
+    <!-- "Participe de nossos eventos" com microdados Schema.org para Event -->
+    <section id="events" aria-labelledby="events-heading" itemscope itemtype="http://schema.org/Event">
+      <h2 id="events-heading" itemprop="name">Participe de nossos eventos</h2>
+
+      <!-- Evento com descrição e data (itemprop=description e itemprop=startDate) -->
+      <div>
+        <p itemprop="description">
+          <strong>Festival Anual de Verão</strong><br>
+          Venha celebrar com música, comidas locais e atividades para toda a família.
+        </p>
+
+
+
+
+        <!-- Data/hora com <time> e atributo datetime legível por máquina -->
+        <!-- Exemplo: evento em 15 de julho de 2050 às 18:00 (formato ISO 8601) -->
+        <p>
+          Data e hora:
+          <time itemprop="startDate" datetime="2050-07-15T18:00">15 de julho de 2050 às 18:00</time>
+        </p>
+
+        <!-- Informação de local (opcionalmente marcada como Place) -->
+        <div itemprop="location" itemscope itemtype="http://schema.org/Place">
+          <meta itemprop="name" content="Harbor Light Community Center" />
+          <p itemprop="address">Rua das Marés, 123 — Porto Alegre, RS</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- "Fale Conosco" convertido para seção/contato; id contact para âncora -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Fale Conosco</h2>
+      <p>Tem perguntas ou quer se voluntariar? Entre em contato conosco:</p>
+      <p>
+        Email: <a href="mailto:info@harborlight.com">info@harborlight.com</a>
+      </p>
+      <p>Telefone: (51) 4000-0000 (exemplo)</p>
+      <p>Horário de atendimento: Seg — Sex, 9:00 — 17:00</p>
+    </section>
+  </main>
+
+
+
+
+  <!-- Footer convertido do último <div> -->
+  <footer>
+    <p>© 2025 Harbor Light Community Center - Ryan  </p>
+  </footer>
+
+</body>
+</html>

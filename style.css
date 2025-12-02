@@ -1,0 +1,132 @@
+  /* Define a fonte para todo o body (substitui uso de <font> obsoleto) */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      color: #000000;
+    }
+
+    /* Classe para centralizar e dar espaço ao conteúdo (logo container) */
+    .center-and-space-content {
+      text-align: center; /* centraliza horizontalmente */
+      padding: 10px; /* espaçamento interno */
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #0289ff;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2b79ad;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 1.25rem auto;
+      padding: 0 16px;
+    }
+
+    section {
+      margin-bottom: 1.5rem;
+      padding: 12px;
+      border-radius: 8px;
+      background: #e4be55;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    h1, h2 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    footer {
+      background: #e4be55;
+      padding: 16px;
+      text-align: center;
+      border-top: 1px solid #0289ff;
+      margin-top: 2rem;
+    }
+
+    /* Pequeno estilo para links de âncora focados (acessibilidade) */
+    a:focus {
+      outline: 3px solid rgb(255, 255, 255);
+      outline-offset: 2px;
+    }
+
+
+
+
+    
+
+    /* Rolagem suave ao clicar no menu */
+html {
+  scroll-behavior: smooth;
+}
+
+/* NAV bonito */
+nav {
+  background: #ffffff;
+  border-bottom: 2px solid #e1e1e1;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #d32f2f;   /* vermelho elegante */
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+/* Efeito hover */
+nav a:hover {
+  color: #b71c1c;
+  transform: scale(1.08);
+  text-shadow: 0px 0px 6px #ffbaba;
+}
+
+/* Efeito ao clicar */
+nav a:active {
+  transform: scale(0.95);
+}
+
+
+/* Animação suave */
+section {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+/* Levantar ao clicar */
+section:active {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
